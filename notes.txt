@@ -1,0 +1,8 @@
+
+exec ssh-agent bash
+ssh-add -k ~/.ssh/mkv4096
+passphrase: Max{ind}
+
+ssh -i ~/.ssh/mkv4096 mkv0@github.com "git clone https://github.com/mkv0/test.git"
+git config core.sshCommand "ssh -i ~/.ssh/mkv4096"
+git clone https://github.com/mkv0/test.git
